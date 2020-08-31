@@ -14,5 +14,4 @@ This Terraform module will configure the basic OpenStack Project, Role, Role Ass
 ```
 
 git clone https://github.com/amperecomputing/terraform-openstack-tenant
-cd terraform-openstack-k3os-cluster
 terraform init && terraform plan && terraform apply -auto-approve
