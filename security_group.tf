@@ -1,6 +1,6 @@
 resource "openstack_compute_secgroup_v2" "secgroup_1" {
-  name        = "cidr_security_group"
-  description = "CIDR security group"
+  name        = "default_tenant_security_group"
+  description = "Default tenant security group"
 
   rule {
     from_port   = 22
