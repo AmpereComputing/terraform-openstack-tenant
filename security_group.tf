@@ -1,3 +1,4 @@
+# Create security group for tenant
 resource "openstack_compute_secgroup_v2" "secgroup_1" {
   name        = "${var.project_name}_security_group"
   description = "${var.project_name} security group"

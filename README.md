@@ -9,9 +9,16 @@
 This Terraform module will configure the basic OpenStack Project, Role, Role Assignment to create an OpenStack tenant with named users.
 
 
-## Quickstart
+## Usage
 
 ```
 
-git clone https://github.com/amperecomputing/terraform-openstack-tenant
-terraform init && terraform plan && terraform apply -auto-approve
+module "openstack_tenant" {
+  source = "github.com/amperecomputing/terraform-openstack-tenant"
+  os_project_name = "QA"
+  os_usernames = ["bwayne","ckent"]
+  os_user_password = "ChangeMe"
+  os_user_email_addr = ["bwayne@example.com","ckent@example.com"]
+}
+
+```

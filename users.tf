@@ -5,7 +5,7 @@ resource "openstack_identity_user_v3" "user_1" {
   name               = var.os_username[count.index]
   description        = var_os_user_description
 
-  password = var.os_user_password
+  password = var.os_user_default_password
 
   ignore_change_password_upon_first_use = true
 
