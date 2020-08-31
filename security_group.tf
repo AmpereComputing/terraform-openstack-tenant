@@ -1,6 +1,6 @@
 resource "openstack_compute_secgroup_v2" "secgroup_1" {
-  name        = "default_tenant_security_group"
-  description = "Default tenant security group"
+  name        = "${var.project_name}_security_group"
+  description = "${var.project_name} security group"
 
   rule {
     from_port   = 22
