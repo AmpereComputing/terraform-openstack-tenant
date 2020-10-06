@@ -20,6 +20,6 @@ resource "openstack_identity_user_v3" "user_1" {
   }
 
   extra = {
-    email = var.os_user_email[count.index]
+    email = var.os_user_email_addr[count.index]
   }
 }
