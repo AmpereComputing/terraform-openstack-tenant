@@ -15,7 +15,7 @@ variable "os_role_name" {
 
 variable "os_usernames" {
   description = "OpenStack Username"
-  type = string
+  type = list(string)
 }
 
 variable "os_user_description" {
@@ -30,5 +30,5 @@ variable "os_user_default_password" {
 
 variable "os_user_email_addr" {
   description = "OpenStack User email address"
-  type = string
+  type = list(string)
 }
