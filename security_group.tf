@@ -58,7 +58,7 @@ resource "openstack_networking_secgroup_rule_v2" "secgroup_default_rule_ssh" {
   port_range_min    = 22
   port_range_max    = 22
   remote_ip_prefix  = "0.0.0.0/0"
-  security_group_id = "${openstack_networking_secgroup_v2.project_1.id}"
+  security_group_id = openstack_networking_secgroup_v2.project_1.id
 }
 
 resource "openstack_networking_secgroup_rule_v2" "secgroup_default_rule_http" {
@@ -68,7 +68,7 @@ resource "openstack_networking_secgroup_rule_v2" "secgroup_default_rule_http" {
   port_range_min    = 80
   port_range_max    = 80
   remote_ip_prefix  = "0.0.0.0/0"
-  security_group_id = "${openstack_networking_secgroup_v2.project_1.id}"
+  security_group_id = openstack_networking_secgroup_v2.project_1.id
 }
 
 resource "openstack_networking_secgroup_rule_v2" "secgroup_default_rule_https" {
@@ -78,7 +78,7 @@ resource "openstack_networking_secgroup_rule_v2" "secgroup_default_rule_https" {
   port_range_min    = 443
   port_range_max    = 443
   remote_ip_prefix  = "0.0.0.0/0"
-  security_group_id = "${openstack_networking_secgroup_v2.project_1.id}"
+  security_group_id = openstack_networking_secgroup_v2.project_1.id
 }
 
 resource "openstack_networking_secgroup_rule_v2" "secgroup_default_rule_k8s" {
@@ -88,7 +88,7 @@ resource "openstack_networking_secgroup_rule_v2" "secgroup_default_rule_k8s" {
   port_range_min    = 8080
   port_range_max    = 8080
   remote_ip_prefix  = "0.0.0.0/0"
-  security_group_id = "${openstack_networking_secgroup_v2.project_1.id}"
+  security_group_id = openstack_networking_secgroup_v2.project_1.id
 }
 
 resource "openstack_networking_secgroup_rule_v2" "secgroup_default_rule_icmp" {
@@ -98,5 +98,5 @@ resource "openstack_networking_secgroup_rule_v2" "secgroup_default_rule_icmp" {
   port_range_min    = -1
   port_range_max    = -1
   remote_ip_prefix  = "0.0.0.0/0"
-  security_group_id = "${openstack_networking_secgroup_v2.project_1.id}"
+  security_group_id = openstack_networking_secgroup_v2.project_1.id
 }
