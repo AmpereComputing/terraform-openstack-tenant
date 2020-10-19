@@ -45,7 +45,7 @@ data "openstack_identity_project_v3" "project_1" {
   name = "var.os_project_name"
 }
 
-data "openstack_networking_secgroup_v2 "project_1" {
+data "openstack_networking_secgroup_v2" "project_1" {
   name = "${var.os_project_name} secgroup"
   tenant_id = "${openstack_identity_project_v3.project_1.id}"
 }
